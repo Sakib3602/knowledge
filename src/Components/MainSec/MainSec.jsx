@@ -16,7 +16,7 @@ const MainSec = () => {
   const [btn2, setbtn2] = useState(0);
 
   function handle(d) {
-    console.log("handle",d);
+    
 
     let newBtn = [...btn1 , d]
     setbtn1(newBtn)
@@ -24,10 +24,12 @@ const MainSec = () => {
     
   }
   // read time not fixed
-  function read() {
-    let newBtn = btn2 + 1;
+  function read(time) {
+   
 
-    setbtn2(newBtn);
+    let newRead = btn2 + time
+    setbtn2(newRead)
+    
   }
 
 
@@ -35,8 +37,8 @@ const MainSec = () => {
   return (
     <div className="flex w-[80%] m-auto ">
       <div className="w-[80%]">
-        {data1.map((e) => (
-          <First read={read} handle={handle} data1={e}></First>
+        {data1.map((e,index) => (
+          <First key={index} read={read} handle={handle} data1={e}></First>
         ))}
       </div>
       <Second btn1={btn1} btn2={btn2}></Second>

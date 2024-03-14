@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const Second = ({ btn1, btn2 }) => {
   return (
-    <div className="bg-gray-100 mt-6  w-[35%] min-h-[400px]  p-[20px]">
+    <div className="bg-[#EEE4B1] mt-6  w-[35%] min-h-[800px]  rounded-xl p-[20px]">
       <div className="flex justify-between">
         <h1 className="text-[20px] font-sans font-[700]">Cart : {btn1.length}</h1>
         <h1 className="text-[20px] font-sans font-[700]">
@@ -11,6 +11,7 @@ const Second = ({ btn1, btn2 }) => {
       </div>
       <br />
       <hr />
+
 
 
       {
@@ -28,6 +29,9 @@ const Second = ({ btn1, btn2 }) => {
   );
 };
 
-Second.propTypes = {};
+Second.propTypes = {
+  btn1 : PropTypes.array,
+  btn2 : PropTypes.number
+};
 
 export default Second;

@@ -12,8 +12,10 @@ const First = ({ data1, handle, read }) => {
     hashtags,
   } = data1;
 
+  
+
   return (
-    <div className="p-4 rounded-2xl bg-gray-200 mt-[20px] w-[75%] min-h-[400px] ">
+    <div className="p-4 rounded-2xl bg-[#EEE4B1] mt-[20px] w-[75%] min-h-[400px] ">
       <img className="rounded-2xl " src={cover} alt="" />
 
       <div className=" space-y-3">
@@ -25,7 +27,7 @@ const First = ({ data1, handle, read }) => {
         <h1 className="text-[25px] font-[500]">{title}</h1>
         <div className="flex justify-between">
           <h1>Post Date : {posted_date}</h1>
-          <button onClick={read} className="text-blue-600">
+          <button onClick={()=>read(reading_time)} className="text-blue-600">
             Reading Time {reading_time}
           </button>
         </div>
@@ -55,6 +57,8 @@ First.propTypes = {
   author_img: PropTypes.string,
   author: PropTypes.string,
   reading_time: PropTypes.number,
+  handle: PropTypes.func,
+  read: PropTypes.func
 };
 
 export default First;

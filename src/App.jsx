@@ -4,8 +4,10 @@ import Nav from "./Components/Nav/Nav";
 function App() {
   return (
     <>
-      <Nav></Nav>
+     <div className="bg-[#00224D] font-sans">
+     <Nav></Nav>
       <MainSec></MainSec>
+     </div>
     </>
   );
 }
