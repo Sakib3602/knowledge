@@ -1,14 +1,13 @@
-
-
+import MainSec from "./Components/MainSec/MainSec";
+import Nav from "./Components/Nav/Nav";
 
 function App() {
-  
-
   return (
     <>
-      <h1>Start</h1>
+      <Nav></Nav>
+      <MainSec></MainSec>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
